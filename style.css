@@ -242,6 +242,31 @@ footer::before {
 }
 .wicky-mascot { font-size: 3rem; margin-bottom: 15px; color: #7fdbff; position: relative; z-index: 1; }
 
+.footer-nav {
+    margin: 20px 0;
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #7fdbff;
+}
+
 @media (max-width: 768px) {
     .container { padding: 20px 15px; }
     nav ul { flex-direction: column; gap: 15px; padding: 15px; }
@@ -258,14 +283,14 @@ footer::before {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(30, 136, 229, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: white;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(30, 136, 229, 0.9);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -277,13 +302,14 @@ footer::before {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(182, 238, 244, 0), transparent);
     transition: left 0.5s;
 }
 .read-more:hover, .back-link:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(30, 136, 229, 1.0);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    color: white;
 }
 .coming-soon-section {
     display: flex;
