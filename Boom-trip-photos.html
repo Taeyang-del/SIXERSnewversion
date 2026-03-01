@@ -25,7 +25,6 @@
       <li><a href="comedy.html"><i class="fas fa-theater-masks"></i> Comedy</a></li>
       <li><a href="fun-facts.html"><i class="fas fa-lightbulb"></i> Fun Facts</a></li>
       <li><a href="spotlight.html"><i class="fas fa-star"></i> Spotlight</a></li>
-      <li><a href="interviews.html"><i class="fas fa-microphone"></i> Interviews</a></li>
       <li><a href="Boom-trip-photos.html" class="active"><i class="fas fa-camera"></i> Trips & Events</a></li>
     </ul>
   </nav>
@@ -35,7 +34,7 @@
       <h2 class="section-title"><i class="fa-solid fa-water-ladder"></i> What's a Boom Trip? </h2>
       <p> The Boom Trip is an exciting event that all sixth graders participate in.<br> The goal of the trip is to help
         students build stronger connections with one another while having fun.</p>
-      <p> It’s a two-day experience — the first day takes place at CI, and the second day is held at Wavepark.</br>
+      <p> It's a two-day experience — the first day takes place at CI, and the second day is held at Wavepark.</br>
         Students can choose between two thrilling activities: scuba diving or surfing,</p> making it an unforgettable
       adventure for everyone.
       <p> </p>
@@ -345,12 +344,7 @@
         </div>
         <div class="gallery-item"><img loading="eager" src="BOOM PHOTOS 2025 2/IMG_4392.JPG" alt="Boom Trip IMG_4392">
         </div>
-
-
-
-
-
-
+      </div>
     </section>
   </div>
 
@@ -467,80 +461,28 @@
     </div>
   </div>
 
-  <script>
-    // Simple lightbox for the gallery
-    (function () {
-      const gallery = document.querySelector('.gallery');
-      if (!gallery) return;
-
-      const imgs = Array.from(gallery.querySelectorAll('img'));
-
-      // Add caption overlays using alt attributes
-      imgs.forEach(img => {
-        const wrapper = img.closest('.gallery-item');
-        if (!wrapper) return;
-        const cap = document.createElement('div');
-        cap.className = 'caption';
-        cap.textContent = img.alt || '';
-        wrapper.appendChild(cap);
-      });
-
-      const lightbox = document.getElementById('lightbox');
-      const lbImg = document.getElementById('lightbox-img');
-      const lbCaption = document.getElementById('lightbox-caption');
-      const btnClose = document.querySelector('.lightbox-close');
-      const btnPrev = document.getElementById('lightbox-prev');
-      const btnNext = document.getElementById('lightbox-next');
-
-      let current = 0;
-
-      function open(index) {
-        current = index;
-        lbImg.src = imgs[current].src;
-        lbImg.alt = imgs[current].alt || '';
-        lbCaption.textContent = imgs[current].alt || '';
-        lightbox.classList.add('active');
-        lightbox.setAttribute('aria-hidden', 'false');
-      }
-
-      function close() {
-        lightbox.classList.remove('active');
-        lightbox.setAttribute('aria-hidden', 'true');
-        lbImg.src = '';
-        lbCaption.textContent = '';
-      }
-
-      function prev() { open((current - 1 + imgs.length) % imgs.length); }
-      function next() { open((current + 1) % imgs.length); }
-
-      imgs.forEach((img, i) => img.addEventListener('click', () => open(i)));
-      btnClose && btnClose.addEventListener('click', close);
-      btnPrev && btnPrev.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
-      btnNext && btnNext.addEventListener('click', (e) => { e.stopPropagation(); next(); });
-
-      // close when clicking outside image
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) close();
-      });
-
-      // keyboard support
-      window.addEventListener('keydown', (e) => {
-        if (!lightbox.classList.contains('active')) return;
-        if (e.key === 'Escape') close();
-        if (e.key === 'ArrowLeft') prev();
-        if (e.key === 'ArrowRight') next();
-      });
-    })();
-  </script>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title"><i class="sixers"></i> Other Photos</h2>
+      <div class="gallery">
+        <!-- Other photos go here -->
+      </div>
+    </section>
+  </div>
 
   <footer>
     <div class="wicky-mascot"><i class="fas fa-water"></i></div>
     <p>Chadwick International - Grade 6 Sixers</p>
     <p>© 2025 Sixers Website Club</p>
-    <p> Website Programmed by Taeyang Eum, Shane Choi</p>
+    <p>Website Programmed by Taeyang Eum, Shane Choi</p>
     <p><a href="https://www.youtube.com/@CI_sixers/videos" target="_blank"
         style="color: white; text-decoration: none;"><i class="fab fa-youtube"></i> CI Sixers YouTube</a></p>
   </footer>
+
+  <script>
+    
+  </script>
+
 </body>
 
 </html>
